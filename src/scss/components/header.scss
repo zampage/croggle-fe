@@ -1,9 +1,13 @@
 header{
 	$headerHeight:50px;
+	$menuMobileWidth:50%;
+	$menuMobileAnimationDuration: 0.3s;
 
 	.bar{
 		width:100%;
 		height:$headerHeight;
 		background-color:$colorBrown;
 	}
+
+	@import "header/mobile-nav-logic";
 }

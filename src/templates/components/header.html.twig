@@ -1,5 +1,23 @@
 <div class="bar">
-	<div class="container">
-		<i class="fas fa-bars"></i>
-	</div>
+	<nav class="container">
+		{% set trigger = 'menu-trigger' %}
+		<input type="checkbox" id="{{trigger}}" class="menu-trigger" />
+		<label for="{{trigger}}">
+			<i class="fas fa-bars"></i>
+		</label>
+		<ul class="menu">
+			{% set nav = [
+				{link: 'products.html', text: 'Products'},
+				{link: 'patterns.html', text: 'Patterns'},
+				{link: 'about.html', text: 'About'},
+				{link: 'blog.html', text: 'Blog'},
+			] %}
+
+			{% for item in nav %}
+				<li>
+					<a href="{{item.link}}">{{item.text}}</a>
+				</li>
+			{% endfor %}
+		</div>
+	</nav>
 </div>

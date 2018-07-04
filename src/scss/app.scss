@@ -1,6 +1,11 @@
 //settings
 @import "settings/colors";
 
+//utils
+@import "util/screen";
+@import "util/shadow";
+@import "util/list";
+
 //bootstrap
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
