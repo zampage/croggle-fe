@@ -1,0 +1,19 @@
+{
+  "name": "croggle-fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zampage/croggle-fe.git"
+  },
+  "author": "App Castle, Markus Chiarot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zampage/croggle-fe/issues"
+  },
+  "homepage": "https://github.com/zampage/croggle-fe#readme"
+}
