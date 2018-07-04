@@ -1,0 +1,8 @@
+.menu-trigger,
+.menu-trigger ~ label{
+	display:none;
+}
+
+ul.menu{
+	@include resetUl;
+}

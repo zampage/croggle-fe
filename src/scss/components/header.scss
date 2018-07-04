@@ -9,5 +9,6 @@ header{
 		background-color:$colorBrown;
 	}
 
+	@import "header/nav";
 	@import "header/mobile-nav-logic";
 }

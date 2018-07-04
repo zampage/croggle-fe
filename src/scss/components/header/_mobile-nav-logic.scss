@@ -1,7 +1,6 @@
 @include screen-max(sm){
 	//menu
 	ul.menu{
-		@include resetUl;
 		transition:left $menuMobileAnimationDuration ease;
 		position:fixed;
 		top:$headerHeight;
@@ -35,7 +34,9 @@
 
 	//click logic
 	.menu-trigger{
-		display:none;
+		& ~ label{
+			display:inline-block;
+		}
 
 		&:checked ~ {
 			label:before{
