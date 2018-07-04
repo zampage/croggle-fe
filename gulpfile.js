@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const del = require('del');
 const twig = require('gulp-twig');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -22,6 +23,10 @@ const dir = {
 }
 
 //workers
+const clean = (done) => {
+	del.sync(dir.dist.base);
+	done();
+}
 const buildTwig = () => {
 	return gulp.src(dir.src.twig)
 		.pipe(twig({data: {}, extname: ''}))
@@ -51,6 +56,6 @@ const watch = () => {
 }
 
 //tasks
-gulp.task('build', gulp.parallel(buildTwig, buildSass, buildImages));
-gulp.task('watch', gulp.parallel(watch));
+gulp.task('build', gulp.series(clean, buildImages, buildSass, buildTwig));
+gulp.task(watch);
 gulp.task('default', gulp.series('build', 'watch'));
