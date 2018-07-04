@@ -1,6 +1,12 @@
+//settings
+@import "settings/colors";
+
 //bootstrap
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/bootstrap-reboot";
 @import "bootstrap/scss/grid";
+
+//components
+@import "components/header";
