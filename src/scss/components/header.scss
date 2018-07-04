@@ -1,12 +1,20 @@
 header{
-	$headerHeight:50px;
-	$menuMobileWidth:50%;
-	$menuMobileAnimationDuration: 0.3s;
-
 	.bar{
 		width:100%;
 		height:$headerHeight;
 		background-color:$colorBrown;
+	}
+
+	.logo{
+		float:left;
+		max-width:$logoMaxSize;
+		max-height:$logoMaxSize;
+		margin-top:$logoTopMargin;
+
+		@include screen-max(sm){
+			max-width:$logoMobileMaxSize;
+			max-height:$logoMobileMaxSize;
+		}
 	}
 
 	@import "header/nav";

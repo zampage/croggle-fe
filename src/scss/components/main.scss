@@ -1,0 +1,13 @@
+main{
+	.page-header{
+		min-height:$contentDesktopPageHeaderMinHeight;
+		margin-left:$logoMaxSize + $spaceSmall;
+		display:flex;
+		align-items:center;
+		text-align: right;
+
+		h1{
+			width:100%;
+		}
+	}
+}

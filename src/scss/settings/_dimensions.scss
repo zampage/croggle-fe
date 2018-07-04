@@ -1,0 +1,7 @@
+$headerHeight:50px;
+$logoTopMargin: $spaceSmall;
+$logoMaxSize: $headerHeight * 2;
+$logoMobileMaxSize: $logoMaxSize / 3 * 2;
+$contentDesktopPageHeaderMinHeight: $logoMaxSize + $logoTopMargin - $headerHeight + $spaceMedium;
+$menuMobileWidth:50%;
+$menuMobileAnimationDuration: 0.3s;

@@ -1,6 +1,7 @@
 //settings
 @import "settings/colors";
 @import "settings/spaces";
+@import "settings/dimensions";
 
 //utils
 @import "util/screen";
@@ -16,3 +17,4 @@
 
 //components
 @import "components/header";
+@import "components/main";
