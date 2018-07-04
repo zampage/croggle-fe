@@ -12,10 +12,12 @@ const dir = {
 		twigWatch: 'src/templates/**/*.twig',
 		sass: 'src/scss/*.scss',
 		sassWatch: 'src/scss/**/*.scss',
+		img: 'src/img/**/*',
 	},
 	dist: {
 		base: 'dist',
 		css: 'dist/css',
+		img: 'dist/img'
 	},
 }
 
@@ -36,14 +38,19 @@ const buildSass = () => {
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(dir.dist.css));
 }
+const buildImages = () => {
+	return gulp.src(dir.src.img)
+		.pipe(gulp.dest(dir.dist.img));
+}
 
 //watches
 const watch = () => {
 	gulp.watch(dir.src.twigWatch, buildTwig);
 	gulp.watch(dir.src.sassWatch, buildSass);
+	gulp.watch(dir.src.img, buildImages);
 }
 
 //tasks
-gulp.task('build', gulp.parallel(buildTwig, buildSass));
+gulp.task('build', gulp.parallel(buildTwig, buildSass, buildImages));
 gulp.task('watch', gulp.parallel(watch));
 gulp.task('default', gulp.series('build', 'watch'));
