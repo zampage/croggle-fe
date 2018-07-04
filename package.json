@@ -33,6 +33,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0",
     "bootstrap": "^4.1.1"
   }
 }
