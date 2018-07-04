@@ -1,51 +1,60 @@
 @include screen-max(sm){
-	//menu
-	ul.menu{
-		transition:left $menuMobileAnimationDuration ease;
-		position:fixed;
-		top:$headerHeight;
-		left:100%;
-		bottom:0;
-		width:$menuMobileWidth;
-		height:calc(100% - $headerHeight);
-		background-color:$colorWhite;
-		@include shadow-bold;
-		padding:$spaceSmall;
+	nav{
+		//menus
+		ul.menu{
+			transition:left $menuMobileAnimationDuration ease;
+			position:fixed;
+			top:$headerHeight;
+			left:100%;
+			bottom:0;
+			width:$menuMobileWidth;
+			height:calc(100% - $headerHeight);
+			background-color:$colorWhite;
+			@include shadow-bold;
+			padding:$spaceSmall;
 
-		li{
-			display:block;
-		}
-	}
+			li{
+				display:block;
+				height:auto;
 
-	//backdrop
-	.menu-trigger ~ label:before{
-		transition:opacity $menuMobileAnimationDuration ease;
-		opacity:0;
-		pointer-events: none;
-		content:'';
-		position:fixed;
-		top:$headerHeight;
-		left:0;
-		bottom:0;
-		width:100%;
-		height:calc(100% - $headerHeight);
-		background-color:rgba($colorBlack, 0.2);
-	}
-
-	//click logic
-	.menu-trigger{
-		& ~ label{
-			display:inline-block;
+				&[data-active="true"],
+				&:hover{
+					background-color:transparent;
+					text-decoration: underline;
+				}
+			}
 		}
 
-		&:checked ~ {
-			label:before{
-				opacity:1;
-				pointer-events:auto;
+		//backdrop
+		.menu-trigger ~ label:before{
+			transition:opacity $menuMobileAnimationDuration ease;
+			opacity:0;
+			pointer-events: none;
+			content:'';
+			position:fixed;
+			top:$headerHeight;
+			left:0;
+			bottom:0;
+			width:100%;
+			height:calc(100% - $headerHeight);
+			background-color:rgba($colorBlack, 0.2);
+		}
+
+		//click logic
+		.menu-trigger{
+			& ~ label{
+				display:inline-block;
 			}
 
-			ul.menu{
-				left:100% - $menuMobileWidth;
+			&:checked ~ {
+				label:before{
+					opacity:1;
+					pointer-events:auto;
+				}
+
+				ul.menu{
+					left:100% - $menuMobileWidth;
+				}
 			}
 		}
 	}

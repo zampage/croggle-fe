@@ -1,8 +1,30 @@
-.menu-trigger,
-.menu-trigger ~ label{
-	display:none;
-}
+nav{
+	height:100%;
 
-ul.menu{
-	@include resetUl;
+	.menu-trigger,
+	.menu-trigger ~ label{
+		display:none;
+	}
+
+	ul.menu{
+		@include resetUl;
+		height:100%;
+
+		li{
+			display:inline-block;
+			height:100%;
+			padding:0 $spaceSmall;
+
+			a{
+				display:flex;
+				height:100%;
+				align-items:center;
+			}
+
+			&[data-active="true"],
+			&:hover{
+				background-color:darken($colorBrown, 5%);
+			}
+		}
+	}
 }

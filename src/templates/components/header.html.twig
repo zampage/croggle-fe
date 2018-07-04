@@ -5,19 +5,23 @@
 		<label for="{{trigger}}">
 			<i class="fas fa-bars"></i>
 		</label>
-		<ul class="menu">
-			{% set nav = [
-				{link: 'products.html', text: 'Products'},
-				{link: 'patterns.html', text: 'Patterns'},
-				{link: 'about.html', text: 'About'},
-				{link: 'blog.html', text: 'Blog'},
-			] %}
+		{% spaceless %}
+			<ul class="menu">
+				{% set nav = [
+					{link: 'products.html', text: 'Products'},
+					{link: 'patterns.html', text: 'Patterns', active: true},
+					{link: 'about.html', text: 'About'},
+					{link: 'blog.html', text: 'Blog'},
+				] %}
 
-			{% for item in nav %}
-				<li>
-					<a href="{{item.link}}">{{item.text}}</a>
-				</li>
-			{% endfor %}
-		</div>
+				{% for item in nav %}
+					<li {% if item.active %}data-active="true"{% endif %}>
+						<a href="{{item.link}}">
+							<span>{{item.text}}</span>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endspaceless %}
 	</nav>
 </div>
