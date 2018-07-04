@@ -11,6 +11,11 @@
 		height:calc(100% - $headerHeight);
 		background-color:$colorWhite;
 		@include shadow-bold;
+		padding:$spaceSmall;
+
+		li{
+			display:block;
+		}
 	}
 
 	//backdrop
