@@ -27,6 +27,9 @@ const dir = {
 		img: 'dist/img',
 		js: 'dist/js',
 	},
+	sassPaths: [
+		'node_modules'
+	]
 }
 
 //namings
@@ -46,7 +49,8 @@ const buildTwig = () => {
 const buildSass = () => {
 	return gulp.src(dir.src.sass)
 		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({includePaths: dir.sassPaths})
+		.on('error', sass.logError))
 		.pipe(autoprefixer({
 				browsers: ['defaults', 'not ie < 9']
 		}))
