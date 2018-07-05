@@ -1,9 +1,27 @@
 @include screen-max(sm){
 	nav{
+		$slideTrans: left $menuMobileAnimationDuration ease;
+		$opacityCloseTrans: opacity 0s ease $menuMobileAnimationDuration;
+		$opacityOpenTrans: opacity 0s linear;
+
+		//hamburger
+		.menu-trigger ~ label{
+			display:inline-block;
+			margin:0; //reset label margin
+			height:100%;
+			cursor:pointer;
+
+			span{
+				display:flex;
+				align-items:center;
+				height:100%;
+			}
+		}
+
 		//menus
 		ul.menu{
 			opacity:0;
-			transition:left $menuMobileAnimationDuration ease;
+			transition:$slideTrans, $opacityCloseTrans;
 			position:fixed;
 			top:$headerHeight;
 			left:100%;
@@ -43,10 +61,6 @@
 
 		//click logic
 		.menu-trigger{
-			& ~ label{
-				display:inline-block;
-			}
-
 			&:checked ~ {
 				label:before{
 					opacity:1;
@@ -55,6 +69,7 @@
 
 				ul.menu{
 					opacity:1;
+					transition:$slideTrans, $opacityOpenTrans;
 					left:100% - $menuMobileWidth;
 				}
 			}
