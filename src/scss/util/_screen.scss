@@ -1,3 +1,12 @@
+// default bootstrap breakpoints
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px
+// );
+
 @function breakpoint($bp){
 	@if map-has-key($grid-breakpoints, $bp){
 		@return map-get($grid-breakpoints, $bp);
@@ -8,6 +17,12 @@
 
 @mixin screen-max($breakpoint){
 	@media (max-width: breakpoint($breakpoint)){
+		@content;
+	}
+}
+
+@mixin screen-min($breakpoint){
+	@media (min-width: breakpoint($breakpoint)){
 		@content;
 	}
 }

@@ -1,0 +1,59 @@
+$fontMain: 'Open Sans', Verdana, Arial, sans-serif;
+$fontAccent: Pacifico, cursive;
+
+$fontWeightLight: 100;
+$fontWeightNormal: 300;
+$fontWeightBold: 600;
+
+body{
+	font-family:$fontMain;
+	font-size:16px;
+	color:$colorBlack;
+
+	@include screen-max(sm){
+		font-size:18px;
+	}
+
+	@include screen-min(lg){
+		font-size:18px;
+	}
+}
+
+h1{
+	font-family:$fontAccent;
+	font-size:3em;
+	font-weight:$fontWeightNormal;
+	color:$colorPink;
+}
+
+h2{
+	font-size:2em;
+	font-weight:$fontWeightNormal;
+	color:$colorPink;
+}
+
+h3{
+	font-size:1.5em;
+	font-weight:$fontWeightNormal;
+	color:$colorPink;
+}
+
+h4{
+	font-size:1em;
+	font-weight:$fontWeightBold;
+	color:$colorPink;
+}
+
+p{
+	font-size:1em;
+	color:$colorBlack;
+}
+
+a{
+	color:$colorPink;
+
+	&:hover{
+		color:$colorPink;
+		text-decoration:underline;
+	}
+}
