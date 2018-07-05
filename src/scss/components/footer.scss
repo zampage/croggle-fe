@@ -1,11 +1,16 @@
 footer{
+	$footerPatternHeight: 40px;
+	$footerPatternThreshold: 14px;
+
 	.bar{
 		width:100%;
 		min-height:$footerHeight;
-		background-color:$colorBrown;
 		padding-top:$spaceMedium;
-		padding-bottom:$spaceMedium;
 		border-bottom:10px solid $colorGreen;
+		background:$colorBrown url('../img/leafpattern.png') repeat-x;
+		background-position:center bottom ($footerPatternThreshold * -1);
+		background-size:$footerPatternHeight auto;
+		padding-bottom:$spaceMedium + $footerPatternHeight - $footerPatternThreshold;
 	}
 
 	ul{
