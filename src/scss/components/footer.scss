@@ -1,7 +1,37 @@
 footer{
 	.bar{
 		width:100%;
-		height:$footerHeight;
+		min-height:$footerHeight;
 		background-color:$colorBrown;
+		padding-top:$spaceMedium;
+		padding-bottom:$spaceMedium;
+		border-bottom:10px solid $colorGreen;
+	}
+
+	ul{
+		@include resetUl;
+		font-size:0.75em;
+		line-height:1.8;
+
+		h4{
+			color:$colorPink;
+		}
+
+		a{
+			color:$colorBlack;
+
+			&:hover{
+				text-decoration:none;
+			}
+
+			.icon,
+			span{
+				vertical-align:middle;
+			}
+
+			.icon{
+				font-size:1.4em;
+			}
+		}
 	}
 }
