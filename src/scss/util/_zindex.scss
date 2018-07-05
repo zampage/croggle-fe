@@ -1,0 +1,12 @@
+$zIndexReference: (
+	//				AABB00
+	headerLogo:			010000
+);
+
+@function zIndex($key){
+	@if map-has-key($zIndexReference, $key){
+		@return map-get($zIndexReference, $key);
+	}@else{
+		@return $key;
+	}
+}
