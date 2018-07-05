@@ -1,5 +1,5 @@
 $fontMain: 'Open Sans', Verdana, Arial, sans-serif;
-$fontAccent: Pacifico, cursive;
+$fontAccent: Sacramento, cursive;
 
 $fontWeightLight: 100;
 $fontWeightNormal: 300;
@@ -19,34 +19,56 @@ body{
 	}
 }
 
-h1{
+@mixin fontTitleCursive{
 	font-family:$fontAccent;
-	font-size:3em;
-	font-weight:$fontWeightNormal;
-	color:$colorPink;
+	font-size:4.2em;
+	font-weight:$fontWeightLight;
+	color:$colorBlack;
 }
 
-h2{
+@mixin fontTitleBig{
 	font-size:2em;
 	font-weight:$fontWeightNormal;
 	color:$colorPink;
 }
 
-h3{
+@mixin fontTitleNormal{
 	font-size:1.5em;
 	font-weight:$fontWeightNormal;
 	color:$colorPink;
 }
 
-h4{
+@mixin fontTitleSmall{
 	font-size:1em;
 	font-weight:$fontWeightBold;
 	color:$colorPink;
 }
 
-p{
+@mixin fontP{
 	font-size:1em;
 	color:$colorBlack;
+}
+
+h1{
+	@include fontTitleCursive;
+	margin-top:$spaceMedium;
+	margin-bottom:$spaceSmall;
+}
+
+h2{
+	@include fontTitleBig;
+}
+
+h3{
+	@include fontTitleNormal;
+}
+
+h4{
+	@include fontTitleSmall;
+}
+
+p{
+	@include fontP;
 }
 
 a{

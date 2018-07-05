@@ -20,11 +20,23 @@ nav{
 				display:flex;
 				height:100%;
 				align-items:center;
+
+				span{
+					@include fontP;
+				}
+
+				&:hover{
+					text-decoration: none;
+				}
 			}
 
 			&[data-active="true"],
 			&:hover{
 				background-color:darken($colorBrown, 5%);
+
+				a span{
+					font-weight:$fontWeightBold;
+				}
 			}
 		}
 	}
