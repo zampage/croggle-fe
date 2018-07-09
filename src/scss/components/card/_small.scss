@@ -29,10 +29,20 @@ article.card.card-small{
 
 		.card-author{
 			flex-grow:1;
-		}
 
-		.card-social{
+			.author-initials{
+				display:none;
+			}
 
+			@include screen-max(md){
+				.author-initials{
+					display:inline;
+				}
+
+				.author-full{
+					display:none;
+				}
+			}
 		}
 	}
 }
