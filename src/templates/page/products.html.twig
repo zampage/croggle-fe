@@ -1,0 +1,17 @@
+{% extends '../layout/default.html.twig' %}
+
+{% block pageTitle %}Products{% endblock %}
+
+{% block content %}
+	<div class="row multi-row">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			{% include '../components/product/small.html.twig' %}
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			{% include '../components/product/small.html.twig' %}
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			{% include '../components/product/small.html.twig' %}
+		</div>
+	</div>
+{% endblock %}

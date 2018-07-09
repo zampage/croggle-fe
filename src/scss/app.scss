@@ -8,6 +8,7 @@
 @import "util/shadow";
 @import "util/list";
 @import "util/zindex";
+@import "util/ratio";
 
 //bootstrap
 @import "bootstrap/scss/functions";
@@ -16,11 +17,14 @@
 @import "bootstrap/scss/bootstrap-reboot";
 @import "bootstrap/scss/grid";
 
-//typo
+//late settings
 @import "settings/typo";
+@import "settings/bootstrap";
 
 //components
 @import "components/scaffold";
+@import "components/grid";
 @import "components/header";
 @import "components/main";
 @import "components/footer";
+@import "components/card/card";

@@ -1,0 +1,19 @@
+@mixin ratio($x, $y, $setRelative:true, $setInner:true){
+	@if $setRelative{
+		position:relative;
+	}
+
+	&:after{
+		content:'';
+		display:block;
+		padding-bottom:100% / $x * $y;
+	}
+
+	@if $setInner{
+		& > *:first-child{
+			position:absolute;
+			height:100%;
+			width:100%;
+		}
+	}
+}
