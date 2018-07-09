@@ -25,6 +25,7 @@ article.card.card-small{
 		font-size:0.9em;
 		display:flex;
 		justify-content:space-between;
+		align-items:center;
 		background-color:rgba($colorBrown, 0.75);
 
 		.card-author{
@@ -42,6 +43,14 @@ article.card.card-small{
 				.author-full{
 					display:none;
 				}
+			}
+		}
+
+		.card-social{
+			font-size:1.4em;
+
+			a + a{
+				margin-left:$spaceSmall / 2;
 			}
 		}
 	}
