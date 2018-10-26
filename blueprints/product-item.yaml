@@ -1,0 +1,28 @@
+extends@: default
+
+form:
+    fields:
+        tabs:
+            fields:
+                content:
+                    fields:
+                        header.image:
+                            type: filepicker
+                            label: Produktbild
+                        header.lead:
+                            type: text
+                            label: Lead Text
+                        header.social:
+                            type: list
+                            label: Social Media
+                            fields:
+                                .network:
+                                    type: select
+                                    label: Netzwerk
+                                    options:
+                                        facebook: Facebook
+                                        etsy: Etsy
+                                        instagram: Instagram
+                                .url:
+                                    type: text
+                                    label: URL
