@@ -7,8 +7,8 @@ footer.page-footer{
 		width:100%;
 		min-height:$footerHeight;
 		padding-top:$spaceMedium;
-		border-bottom:10px solid $colorGreen;
-		background:$colorBrown url('../img/leafpattern.png') repeat-x;
+		border-bottom:10px solid $colorLightGreen;
+		background:$colorLightBrown url('../img/leafpattern.png') repeat-x;
 		background-position:center bottom ($footerPatternThreshold * -1);
 		background-size:$footerPatternHeight auto;
 		padding-bottom:$spaceMedium + $footerPatternHeight - $footerPatternThreshold;

@@ -32,7 +32,7 @@ nav{
 
 			&[data-active="true"],
 			&:hover{
-				background-color:darken($colorBrown, 5%);
+				background-color:$colorBrown;
 
 				a span{
 					font-weight:$fontWeightBold;
