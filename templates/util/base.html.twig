@@ -1,0 +1,39 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+    {% block head %}
+        <meta charset="utf-8" />
+        <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include 'partials/metadata.html.twig' %}
+
+        <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+        {% block stylesheets %}
+            {% do assets.addCss('theme://dist/css/app.css') %}
+        {% endblock %}
+        {{ assets.css() }}
+
+        {% block javascripts %}
+        {% endblock %}
+        {{ assets.js() }}
+
+    {% endblock head%}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+
+{% block body %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+{% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom') }}
+{% endblock %}
+
+</body>
+</html>
