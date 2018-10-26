@@ -1,6 +1,5 @@
-{% extends 'util/base.html.twig' %}
+{% extends 'layout/default.html.twig' %}
 
 {% block content %}
-    <p>Croggle FE</p>
-    {{ dump(page) }}
+    {{ page.content }}
 {% endblock %}

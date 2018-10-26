@@ -34,7 +34,6 @@ article.card{
 	&.mark-sale{
 		@for $i from 1 through 20{
 			$num: $i * 5;
-			@debug $num;
 			&.sale-#{$num}:after{
 				content: '#{$num}%';
 			}

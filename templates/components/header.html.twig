@@ -1,0 +1,27 @@
+<div class="bar">
+	<div class="container nav-wrapper">
+		<nav>
+			{% set trigger = 'menu-trigger' %}
+			<input type="checkbox" id="{{trigger}}" class="menu-trigger" />
+			<a href="{{ url('/home') }}">
+				<img class="logo" src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
+			</a>
+			<label for="{{trigger}}">
+				<span>
+					<i class="fas fa-bars"></i>
+				</span>
+			</label>
+			{% spaceless %}
+				<ul class="menu">
+                    {% for page in pages.children.visible %}
+                        <li {% if page.active %}data-active="true"{% endif %}>
+                            <a href="{{page.url}}">
+                                <span>{{page.title}}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+				</ul>
+			{% endspaceless %}
+		</nav>
+	</div>
+</div>
