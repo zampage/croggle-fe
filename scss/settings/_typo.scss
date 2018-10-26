@@ -78,6 +78,15 @@ a{
 		color:$colorPink;
 		text-decoration:underline;
 	}
+
+    &.remove-link-style{
+        color:inherit;
+
+        &:hover{
+            color:inherit;
+            text-decoration:none;
+        }
+    }
 }
 
 .signature{
