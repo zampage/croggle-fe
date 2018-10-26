@@ -1,0 +1,14 @@
+{
+    "name": "zampage/croggle-fe",
+    "description": "Croggle Frontend Website",
+    "type": "project",
+    "license": "not free",
+    "authors": [
+        {
+            "name": "Markus Chiarot",
+            "email": "cmarkus@hotmail.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
