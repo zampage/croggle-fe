@@ -1,7 +1,7 @@
 {
     "name": "zampage/croggle-fe",
     "description": "Croggle Frontend Website",
-    "type": "project",
+    "type": "croggle-fe",
     "license": "not free",
     "authors": [
         {
