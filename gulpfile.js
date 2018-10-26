@@ -20,8 +20,6 @@ const dir = {
 	},
 	dist: {
 		base: 'dist',
-		css: 'dist/css',
-		js: 'dist/js',
 	},
 	sassPaths: [
 		'node_modules'
@@ -47,7 +45,7 @@ const buildSass = () => {
 		}))
 		.pipe(cleanCss({compability: 'ie9'}))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(dir.dist.css));
+		.pipe(gulp.dest(dir.dist.base));
 };
 const buildJs = () => {
 	return browserify(dir.src.js).transform(
@@ -59,7 +57,7 @@ const buildJs = () => {
 		.pipe(buffer())
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(dir.dist.js));
+		.pipe(gulp.dest(dir.dist.base));
 };
 
 //watches

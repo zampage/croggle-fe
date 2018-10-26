@@ -14,12 +14,12 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sacramento" rel="stylesheet">
 
         {% block stylesheets %}
-            {% do assets.addCss('theme://dist/css/app.css') %}
+            {% do assets.addCss('theme://dist/app.css') %}
         {% endblock %}
         {{ assets.css() }}
 
         {% block javascripts %}
-            {% do assets.addJs('theme://dist/js/app.js') %}
+            {% do assets.addJs('theme://dist/app.js') %}
         {% endblock %}
         {{ assets.js() }}
 
