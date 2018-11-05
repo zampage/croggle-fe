@@ -1,7 +1,21 @@
 {% extends 'layout/default.html.twig' %}
 
-{% block pageTitle %}{{ page.title }}{% endblock %}
+{% block pageTitle %}{{ page.title }}
+
+
+{% endblock %}
 
 {% block content %}
+    {{page.header.author}}
     {{ page.content }}
+    
+    {%if page.media.images %}
+        <div class="media-slider">
+            {% for image in page.media.images %}
+                {% set filename = image.filename %}
+
+                <div><img src="{{page.url ~ "/" ~ filename}}?cropResize=300,300"></div>
+            {% endfor %}
+        </div>
+    {%endif%}
 {% endblock %}

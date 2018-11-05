@@ -1,0 +1,13 @@
+<article class="card card-small>
+	<main class="card-body">
+		<h3>{{blogentry.title}}</h3>
+		<p>{{blogentry.content}}</p>
+	</main>
+	<footer class="card-footer">
+		<span class="card-date">{{blogentry.header.date | date("d.m.Y H:i")}}</span>
+		<span>&nbsp;-&nbsp;</span>
+		<span class="card-author">
+			<span class="author-full">{{blogentry.header.author}}</span>
+		</span>
+	</footer>
+</article>

@@ -1,0 +1,13 @@
+{% extends 'layout/default.html.twig' %}
+
+{% block pageTitle %}{{ page.title }}{% endblock %}
+
+{% block content %}
+{% set collection = page.collection() %}
+    {{ page.content }}
+
+    {% for blogentry in collection%}
+        {% if not loop.first %}<hr>{%endif%}
+        {% include "components/blog/blog-list-item.html.twig" %}
+    {%endfor%}
+{% endblock %}

@@ -1,0 +1,23 @@
+extends@: default
+child_type: item
+
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        product:
+          type: tab
+          title: "Pattern"
+          fields:
+            pattern-name:
+              type: text
+              label: "Name"
+            etsy: 
+              type: text
+              label: "Shop-Link"
+            make-date:
+              type: Datetime
+              label: "wurde gemacht am"
