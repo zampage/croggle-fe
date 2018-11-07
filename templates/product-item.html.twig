@@ -6,14 +6,14 @@
     <div class="page-product">
 
         <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-5">
                 <div class="product-gallery" data-gallery>
                     {% for image in page.media.images %}
                         <img src="{{ image.url }}">
                     {% endfor %}
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-7">
                 <h2>{{ page.title }}</h2>
                 {{ page.content }}
             </div>
