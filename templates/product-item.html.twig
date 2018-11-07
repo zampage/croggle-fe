@@ -3,11 +3,20 @@
 {% block pageTitle %}{{ page.title }}{% endblock %}
 
 {% block content %}
-    <picture>
-        {% set imgUrl = page.media[page.header.image].url %}
-        <source srcset="{{ imgUrl }}">
-        <img src="{{ imgUrl }}" alt="{{ page.title }}">
-    </picture>
-    <h2>{{ page.title }}</h2>
-    {{ page.content }}
+    <div class="page-product">
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="product-gallery" data-gallery>
+                    {% for image in page.media.images %}
+                        <img src="{{ image.url }}">
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h2>{{ page.title }}</h2>
+                {{ page.content }}
+            </div>
+        </div>
+    </div>
 {% endblock %}
