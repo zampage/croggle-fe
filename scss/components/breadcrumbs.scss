@@ -1,0 +1,13 @@
+#breadcrumbs{
+	margin-bottom:20px;
+
+	.divider{
+		font-size:14px;
+		color:$colorGreen;
+		margin:0 5px;
+	}
+
+	a, span {
+		color:$colorGreen;
+	}
+}

@@ -6,6 +6,7 @@
         <div class="page-header">
             <h1>{% block pageTitle %}Croggle{% endblock %}</h1>
         </div>
+        {% include 'components/breadcrumbs.html.twig' %}
         {% block content %}{% endblock %}
     </main>
     <footer class="page-footer">{% include 'components/footer.html.twig' %}</footer>
