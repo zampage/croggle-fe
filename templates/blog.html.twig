@@ -11,11 +11,24 @@
     {% for blogentry in collection%}
         {% if not loop.first %}
           <div class="blog-entry-divider">
+            {#
             <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
             <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
             <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
             <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
             <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
+            #}
+            <span class="divider-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="divider-mid"></span>
+            <span class="divider-bottom">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </div>
         {% endif %}
         {% include "components/blog/blog-list-item.html.twig" %}

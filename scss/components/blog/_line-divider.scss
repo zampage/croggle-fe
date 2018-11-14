@@ -1,0 +1,54 @@
+$smallLineWidth: 20px;
+$bigLineWidth: 30%;
+$bigLineMinWidth: 150px;
+$lineSize: 6px;
+
+.divider-top,
+.divider-mid,
+.divider-bottom, {
+	display:block;
+	height:$lineSize;
+	margin:5px auto;
+	text-align:center;
+}
+
+.divider-top span,
+.divider-bottom span {
+	display:inline-block;
+	height:$lineSize;
+	width:20px;
+	vertical-align:top;
+}
+
+.divider-top span{
+	width:$smallLineWidth;
+	background-color:$colorPink;
+
+	&:first-of-type{
+	border-radius:$lineSize/2 0 0 0;
+	}
+
+	&:last-of-type{
+	border-radius:0 $lineSize/2 0 0;
+	}
+}
+
+.divider-mid{
+	width:$bigLineWidth;
+	min-width:$bigLineMinWidth;
+	background-color:$colorBrown;
+	border-radius:$lineSize/2;
+}
+
+.divider-bottom span{
+	width:$smallLineWidth;
+	background-color:$colorGreen;
+
+	&:first-of-type{
+	border-radius:0 0 0 $lineSize/2;
+	}
+
+	&:last-of-type{
+	border-radius:0 0 $lineSize/2 0;
+	}
+}

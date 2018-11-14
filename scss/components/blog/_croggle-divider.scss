@@ -1,0 +1,31 @@
+img{
+	height:3vw;
+	width:auto;
+
+	@include screen-max(md) {
+		height:5vw;
+	}
+
+	@include screen-max(sm) {
+		height:7vw;
+	}
+}
+
+img + img {
+	margin-left: 4vw;
+}
+
+img:nth-child(even){
+	transform: scaleX(-1);
+}
+
+//on mobile show 3 croggles at max
+@include screen-max(sm) {
+	img + img + img + img{
+		display:none;
+	}
+
+	img + img {
+		margin-left:8vw;
+	}
+}
