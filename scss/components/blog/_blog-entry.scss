@@ -27,8 +27,12 @@
 		margin-top:$hLineSpacing;
 	}
 
+	footer {
+		color:$colorGreen;
+	}
+
 	footer:before {
-		background-color:$colorBlack;
+		background-color:$colorGreen;
 		margin-bottom:$hLineSpacing;
 	}
 	//------/ horizontal lines --------
