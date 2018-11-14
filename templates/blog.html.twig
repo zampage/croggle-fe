@@ -4,8 +4,9 @@
 
 {% block content %}
   <div id="blog">
-    <h2>{{page.title}}</h2>
-    {{page.content}}
+    <div class="blog-content">
+      {{page.content}}
+    </div>
 
     {% set collection = page.collection() %}
     {% for blogentry in collection%}
