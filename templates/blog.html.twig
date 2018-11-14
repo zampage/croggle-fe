@@ -3,11 +3,22 @@
 {% block pageTitle %}{{ page.title }}{% endblock %}
 
 {% block content %}
-{% set collection = page.collection() %}
-    {{ page.content }}
+  <div id="blog">
+    <h2>{{page.title}}</h2>
+    {{page.content}}
 
+    {% set collection = page.collection() %}
     {% for blogentry in collection%}
-        {% if not loop.first %}<hr>{%endif%}
+        {% if not loop.first %}
+          <div class="blog-entry-divider">
+            <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
+            <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
+            <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
+            <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
+            <img src="{{ url('theme://img/logo-small.png') }}" alt="Croggle" />
+          </div>
+        {% endif %}
         {% include "components/blog/blog-list-item.html.twig" %}
-    {%endfor%}
+    {% endfor %}
+  </div>
 {% endblock %}
