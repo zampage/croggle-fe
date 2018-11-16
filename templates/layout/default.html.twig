@@ -8,6 +8,9 @@
         </div>
         {% include 'components/breadcrumbs.html.twig' %}
         {% block content %}{% endblock %}
+        {% if config.plugins.pagination.enabled and page.header.content.pagination %}
+            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+        {% endif %}
     </main>
     <footer class="page-footer">{% include 'components/footer.html.twig' %}</footer>
 {% endblock %}
