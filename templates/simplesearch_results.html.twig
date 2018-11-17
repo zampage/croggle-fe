@@ -5,26 +5,12 @@
 {% block content %}
     <div id="search">
         <section class="filter">
-            <section class="tiny">
-                <h2>Enter search query</h2>
-                {% include 'partials/simplesearch_searchbox.html.twig' %}
-            </section>
-            <section class="tiny">
-                <p>
-                {% if query %}
-                    {% set count = search_results ? search_results.count : 0 %}
-                    {% if count == 1 %}
-                        {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw }}
-                    {% else %}
-                        {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, count)|raw }}
-                    {% endif %}
-                {% endif %}
-                </p>
-            </section>
+            {% include 'components/search/filter.html.twig' %}
         </section>
         <section>
+            {{ dump(search_results) }}
             {% for page in search_results %}
-                {% include 'components/simplesearch_item.html.twig' with {'page':page} %}
+                {% include 'components/search/result-item.html.twig' with {page: page} %}
             {% endfor %}
         </section>
     </div>

@@ -1,0 +1,21 @@
+{% set min_chars = config.get('plugins.simplesearch.min_query_length', 3) %}
+<form name="search" data-simplesearch-form>
+    {% spaceless %}
+        <div class="input-button-combinator">
+            <input
+                name="searchfield"
+                class="search-input"
+                type="text"
+                {% if min_chars > 0 %} min="{{- min_chars -}}" {% endif %}
+                required
+                value="{{ query|e }}"
+                data-search-invalid="{{ "PLUGIN_SIMPLESEARCH.SEARCH_FIELD_MINIMUM_CHARACTERS"|t(min_chars)|raw }}"
+                data-search-separator="{{ config.system.param_sep }}"
+                data-search-input="{{ base_url }}{{ config.plugins.simplesearch.route == '@self' ? '' : (config.plugins.simplesearch.route == '/' ? '' : config.plugins.simplesearch.route) }}/query"
+            />
+            <button type="submit" class="search-submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    {% endspaceless %}
+</form>

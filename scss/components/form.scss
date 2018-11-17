@@ -1,0 +1,23 @@
+$inputSize: 34px;
+
+input {
+    border:1px solid $colorBorder;
+    padding:3px 5px;
+    min-height: $inputSize;
+}
+
+button {
+    min-height: $inputSize;
+    border-radius:0;
+    outline:0;
+    border:0;
+    background-color:$colorPink;
+    color:$colorWhite;
+    min-width:$inputSize;
+    text-align:center;
+    cursor:pointer;
+}
+
+.input-button-combinator{
+    display:inline-block;
+}
