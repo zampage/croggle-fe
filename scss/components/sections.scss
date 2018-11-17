@@ -1,15 +1,28 @@
-section + section{
-    margin-top:50px;
+$sizes: (false, 50px), ('medium', 30px), ('small', 20px), ('tiny', 10px);
+
+@each $size in $sizes {
+    $selector: '';
+    @if nth($size, 1) {
+        $selector: '.' + nth($size, 1);
+    }
+
+    section + section#{$selector}{
+        margin-top:nth($size, 2);
+
+        &.section-divider:before{
+            bottom:calc(100% + #{nth($size, 2) / 2});
+        }
+    }
 }
 
-section + section.medium{
-    margin-top:30px;
-}
+section + section.section-divider{
+    position:relative;
 
-section + section.small{
-    margin-top:20px;
-}
-
-section + section.tiny{
-    margin-top:10px;
+    &:before{
+        content: '';
+        position:absolute;
+        height:1px;
+        width:100%;
+        border-top:1px solid lighten($colorBlack, 80%);
+    }
 }

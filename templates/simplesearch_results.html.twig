@@ -24,7 +24,7 @@
         </section>
         <section>
             {% for page in search_results %}
-                {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
+                {% include 'components/simplesearch_item.html.twig' with {'page':page} %}
             {% endfor %}
         </section>
     </div>
