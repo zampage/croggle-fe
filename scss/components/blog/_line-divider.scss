@@ -1,11 +1,11 @@
 $smallLineWidth: 20px;
 $bigLineWidth: 30%;
 $bigLineMinWidth: 150px;
-$lineSize: 6px;
+$lineSize: 4px;
 
 .divider-top,
 .divider-mid,
-.divider-bottom, {
+.divider-bottomc {
 	display:block;
 	height:$lineSize;
 	margin:5px auto;
