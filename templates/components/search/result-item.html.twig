@@ -1,16 +1,19 @@
 <section class="section-divider">
     {% set banner = page.media.images|first %}
 
-    {% if banner %}
-        <div class="search-image">
-            <a href="{{ page.url }}">{{ banner.cropZoom(100,100).html|raw }}</a>
+    <div class="container-fluid">
+        <div class="row search-result-item-row">
+            <div class="col-12 col img-col">
+                {% if banner %}
+                    <a href="{{ page.url }}">{{ banner.cropZoom(500,500).html|raw }}</a>
+                {% endif %}
+            </div>
+            <div class="col text-col">
+                <div class="search-item">
+                    <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                    <p>{{ page.summary|raw }}</p>
+                </div>
+            </div>
         </div>
-    {% endif %}
-    <div class="search-item">
-        <div class="search-title">
-            <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-        </div>
-
-        <p>{{ page.summary|raw }}</p>
     </div>
 </section>

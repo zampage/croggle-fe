@@ -1,3 +1,20 @@
 #search{
+    .search-result-item-row .img-col{
+        @include screen-min(sm) {
+            flex-basis: 100px + $grid-gutter-width;
+            flex-grow: 0;
+        }
 
+        @include screen-min(md) {
+            flex-basis:150px + $grid-gutter-width;
+        }
+
+        @include screen-min(lg) {
+            flex-basis:200px + $grid-gutter-width;
+        }
+    }
+
+    .img-col img{
+        max-width:100%;
+    }
 }
