@@ -1,16 +1,10 @@
-title: Featured Products
+extends@: default
 
 form:
     fields:
         tabs:
-            type: tabs
-            active: 1
-
             fields:
-                products:
-                    type: tab
-                    title: Featured Products
-
+                content:
                     fields:
                         header.products:
                             type: pages

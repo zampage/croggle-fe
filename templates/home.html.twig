@@ -3,8 +3,12 @@
 {% block pageTitle %}{{ page.title }}{% endblock %}
 
 {% block content %}
-    {{ page.content }}
+    <section>
+        {{ page.content }}
+    </section>
     {% for module in page.collection() %}
-        {{module.content}}
+        <section>
+            {{module.content}}
+        </section>
     {% endfor %}
 {% endblock %}
