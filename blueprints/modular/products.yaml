@@ -1,0 +1,20 @@
+title: Gallery
+
+form:
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+
+            fields:
+                products:
+                    type: tab
+                    title: Featured Products
+
+                    fields:
+                        header.products:
+                            type: pages
+                            multiple: true
+                            label: Product choices
+                            validate:
+                                type: commalist

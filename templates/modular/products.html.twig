@@ -1,0 +1,9 @@
+<div class="modular modular-products">
+    <div class="row multi-row">
+        {% for product in page.header.products %}
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                {% include 'components/product/small.html.twig' with {page: page.find(product)} %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
