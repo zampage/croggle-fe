@@ -1,0 +1,15 @@
+section + section{
+    margin-top:50px;
+}
+
+section + section.medium{
+    margin-top:30px;
+}
+
+section + section.small{
+    margin-top:20px;
+}
+
+section + section.tiny{
+    margin-top:10px;
+}
