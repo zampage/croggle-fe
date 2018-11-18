@@ -1,6 +1,7 @@
+{{dump(blogentry)}}
 <article class="blog-entry">
 	<main>
-		<h3 class="blog-entry-title">{{blogentry.title}}</h3>
+		<h3 class="blog-entry-title"><a href="{{blogentry.url}}">{{blogentry.title}}</a></h3>
 		<div class="blog-entry-content">
 			{{blogentry.content}}
 		</div>
