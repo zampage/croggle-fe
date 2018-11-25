@@ -7,6 +7,7 @@
 
     aside {
         border-right:$vLineSize solid $vLineColor;
+        padding-right: $spaceToLine;
 
         .blog-date {
             background-color: $colorBrown;
@@ -20,6 +21,10 @@
         span {
             display: block;
         }
+    }
+
+    section {
+        padding-left: $spaceToLine;
     }
 
     .blog-meta span {
