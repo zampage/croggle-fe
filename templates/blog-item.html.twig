@@ -1,6 +1,6 @@
 {% extends 'layout/default.html.twig' %}
 
-{% block pageTitle %}{{ page.title }}{% endblock %}
+{% block pageTitle %}{{ page.parent.title }}{% endblock %}
 
 {% block content %}
 {% include 'components/blog/blog-list-item.html.twig' with {'blogentry': page} %}
@@ -11,7 +11,8 @@
     {% set nextSibling = cp.nextSibling(page.path) %}
     {% set prevSibling = cp.prevSibling(page.path) %}
 
-    {%if nextSibling.title %}<a href="{{nextSibling.url}}">Next</a>{%endif%}
-    {%if prevSibling.title %}<a href="{{prevSibling.url}}">Prev</a>{%endif%}
-        
+    <div class="blog-pagination">
+        {%if prevSibling.title %}<a href="{{prevSibling.url}}" class="btn prev"><i class="icon fa fa-chevron-left"></i> Older Post</a>{%endif%}
+        {%if nextSibling.title %}<a href="{{nextSibling.url}}" class="btn next">Newer Post<i class="icon fa fa-chevron-right"></i></a>{%endif%}
+    </div>
 {% endblock %}
