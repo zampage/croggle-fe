@@ -4,6 +4,16 @@
 
 {% block content %}
 
+    filter by category:
+    <br>
+    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'category'} %}
+    <br>
+    <br>
+    filter by tag:
+    <br>
+    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'tag'} %}
+
+
     <div class="row multi-row">
         {% for product in page.collection() %}
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
