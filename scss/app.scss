@@ -16,6 +16,7 @@
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/bootstrap-reboot";
 @import "bootstrap/scss/grid";
+@import "bootstrap/scss/utilities";
 
 //slick
 @import "slick-carousel/slick/slick.scss";
@@ -38,3 +39,8 @@
 @import "components/sections";
 @import "components/search";
 @import "components/form";
+
+//img reset
+img {
+    max-width: 100%;
+}
