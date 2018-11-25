@@ -26,3 +26,19 @@ form:
                                 .url:
                                     type: text
                                     label: URL
+                        header.marks:
+                            type: list
+                            label: Status
+                            fields:
+                                .color:
+                                    type: colorpicker
+                                    label: Farbe
+                                .textcolor:
+                                    type: select
+                                    label: Textfarbe
+                                    options:
+                                        white: Weiss
+                                        black: Schwarz
+                                .text:
+                                    type: text
+                                    label: Text

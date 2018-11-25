@@ -1,0 +1,14 @@
+.mark {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 50px;
+    text-transform: uppercase;
+
+    & + .mark {
+        margin-left: 5px;
+    }
+}

@@ -1,43 +1,22 @@
 article.card{
 
-	&.card-mark{
-		position:relative;
+    header {
+        position: relative;
+    }
 
-		&:before,
-		&:after{
-			z-index: 100; //relative index
-		}
+	.marks {
+        $spaceing: $outerCardSpace;
+        position: absolute;
+        top: $spaceing;
+        left: $spaceing;
+        right: $spaceing;
+        bottom: $spaceing;
+        display: flex;
+        align-items: flex-end;
+    }
 
-		&:before{
-			content:'';
-			position:absolute;
-			top:0;
-			right:0;
-			width:0;
-			height:0;
-			border-top:100px solid $colorGreen;
-			border-left:100px solid transparent;
-		}
-
-		&:after{
-			content:'';
-			position:absolute;
-			top:0;
-			right:0;
-			color:$colorWhite;
-			font-size:1.4em;
-			padding-top:$spaceSmall;
-			padding-right:$spaceSmall;
-		}
-	}
-
-	&.mark-sale{
-		@for $i from 1 through 20{
-			$num: $i * 5;
-			&.sale-#{$num}:after{
-				content: '#{$num}%';
-			}
-		}
-	}
+    .mark {
+        font-size: 1em;
+    }
 
 }

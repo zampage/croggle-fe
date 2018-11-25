@@ -1,7 +1,13 @@
 {# TODO: implement card marks #}
-<article class="card card-small {% if card.mark %}card-mark mark-{{card.mark.type}} {% if card.mark.addition %}{{card.mark.type}}-{{card.mark.addition}}{% endif %}{% endif %}">
+<article class="card card-small">
     <header>
         <a href="{{ page.url }}" class="card-image remove-link-style" style="background-image:url('{{page.media[page.header.image].url}}')"></a>
+        <div class="marks">
+            {% set color = {white: '#ffffff', black: '#000000'} %}
+            {% for mark in page.header.marks %}
+                <span class="mark" style="background-color:{{ mark.color }}; color:{{ color[mark.textcolor] }}">{{ mark.text }}</span>
+            {% endfor %}
+        </div>
     </header>
     <main class="card-body">
         <a href="{{ page.url }}" class="remove-link-style">
