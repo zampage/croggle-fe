@@ -1,14 +1,13 @@
 {{dump(blogentry)}}
 <article class="blog-entry">
 	<main>
-		<h3 class="blog-entry-title"><a href="{{blogentry.url}}">{{blogentry.title}}</a></h3>
+        <h3 class="blog-entry-title"><a href="{{blogentry.url}}">{{blogentry.title}}</a></h3>
+		<div class="blog-meta">
+            <span>{{blogentry.header.date | date("d M Y")}}</span>
+            <span>{{blogentry.header.author}}</span>
+        </div>
 		<div class="blog-entry-content">
 			{{blogentry.content}}
 		</div>
 	</main>
-	<footer>
-		<span>{{blogentry.header.date | date("d.m.Y H:i")}}</span>
-		<span>&nbsp;-&nbsp;</span>
-		<span>{{blogentry.header.author}}</span>
-	</footer>
 </article>

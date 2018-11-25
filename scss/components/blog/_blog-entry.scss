@@ -1,39 +1,24 @@
 .blog-entry{
 	$vLineColor: $colorBrown;
 	$vLineSize: 15px;
-	$hLineSize: 2px;
-	$hLineWidth: 50px;
-	$hLineSpacing: 10px;
 
 	border-left:$vLineSize solid $vLineColor;
 	padding-left:$vLineSize * 2;
 	margin:30px 0;
 
+    .blog-meta span {
+        font-size: 0.8em;
+        background-color: $colorPink;
+        color: $colorWhite;
+        padding: 3px 5px;
+        border-radius: 5px;
+
+        & + span {
+            margin-left: 5px;
+        }
+    }
+
 	.blog-entry-content{
 		margin:30px 0;
 	}
-
-	//------- horizontal lines --------
-	.blog-entry-title:after,
-	footer:before{
-		content:'';
-		display:block;
-		height:$hLineSize;
-		width:$hLineWidth;
-	}
-
-	.blog-entry-title:after{
-		background-color:$colorPink;
-		margin-top:$hLineSpacing;
-	}
-
-	footer {
-		color:$colorGreen;
-	}
-
-	footer:before {
-		background-color:$colorGreen;
-		margin-bottom:$hLineSpacing;
-	}
-	//------/ horizontal lines --------
 }
