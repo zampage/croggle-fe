@@ -24,6 +24,10 @@
   			    <span class="author-initials">NS</span>
     		</span>
         <span class="card-social">
+            {% if page.header.pdf %}
+                <a href="{{page.media[page.header.pdf].url}}" title="download the pattern" target="_blank"><i class="far fa-file-pdf"></i></a>
+            {% endif %}
+
     			{% for social in page.header.social %}
               <a href="{{social.url}}" target="_blank"><i class="fab fa-{{social.network}}"></i></a>
           {% endfor %}
