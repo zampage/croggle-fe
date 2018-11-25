@@ -5,7 +5,7 @@
         <div class="marks">
             {% set color = {white: '#ffffff', black: '#000000'} %}
             {% for mark in page.header.marks %}
-                <span class="mark" style="background-color:{{ mark.color }}; color:{{ color[mark.textcolor] }}">{{ mark.text }}</span>
+                {% include 'components/util/mark.html.twig' with {mark: mark} %}
             {% endfor %}
         </div>
     </header>
