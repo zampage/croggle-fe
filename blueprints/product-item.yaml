@@ -26,6 +26,18 @@ form:
                                 .url:
                                     type: text
                                     label: URL
+                        header.pdf: 
+                            type: filepicker
+                            label: Pattern
+                            accept:
+                                - .pdf
+                        header.difficulty: 
+                            type: select
+                            label: Schwierigkeitsgrad
+                            options:
+                                1: 'Beginner'
+                                2: 'Advanced'
+                                3: 'Pro'
                         header.marks:
                             type: list
                             label: Status
