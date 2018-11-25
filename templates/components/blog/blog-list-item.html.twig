@@ -9,8 +9,8 @@
         <section class="col">
             <h3 class="blog-entry-title"><a href="{{blogentry.url}}">{{blogentry.title}}</a></h3>
             <div class="blog-meta">
-                <span class="text-nowrap d-sm-none">{{blogentry.header.date | date("d M Y")}}</span>
                 <span class="text-nowrap">{{blogentry.header.author}}</span>
+                <span class="text-nowrap d-sm-none">{{blogentry.header.date | date("d M Y")}}</span>
             </div>
             <div class="blog-entry-content">
                 {{blogentry.content}}

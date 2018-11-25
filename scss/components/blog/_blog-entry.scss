@@ -28,11 +28,9 @@
     }
 
     .blog-meta span {
-        font-size: 0.8em;
+        @include mark;
         background-color: $colorPink;
         color: $colorWhite;
-        padding: 3px 5px;
-        border-radius: 5px;
 
         & + span {
             margin-left: 5px;

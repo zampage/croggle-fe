@@ -5,7 +5,7 @@
         <div class="marks">
             {% set color = {white: '#ffffff', black: '#000000'} %}
             {% for mark in page.header.marks %}
-                {% include 'components/util/mark.html.twig' with {mark: mark} %}
+                {% include 'components/util/mark.html.twig' with {mark: mark, classes: 'mark-bold mark-upper'} %}
             {% endfor %}
         </div>
     </header>
