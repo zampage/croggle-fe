@@ -21,7 +21,9 @@
 }
 
 .product-filter.filter-tags a{
-
+    &:before {
+        content: '#';
+    }
 }
 
 .filter-reset{
