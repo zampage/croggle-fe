@@ -6,12 +6,12 @@
 
     filter by category:
     <br>
-    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'category'} %}
+    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'category', children_only: true} %}
     <br>
     <br>
     filter by tag:
     <br>
-    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'tag'} %}
+    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'tag', children_only: true} %}
 
 
     <div class="row multi-row">
