@@ -24,7 +24,7 @@
                                 {% endfor %}
                             </div>
                         {% endif %}
-                        {%if page.header.difficulty %}
+                        {%if page.header.difficulty and page.header.difficulty != 0 %}
                             <div class="difficulty">
                                 {%for i in range(1, 3)%}
                                     {%if i <= page.header.difficulty %}

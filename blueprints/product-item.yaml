@@ -35,6 +35,7 @@ form:
                             type: select
                             label: Schwierigkeitsgrad
                             options:
+                                0: 'Nicht anzeigen'
                                 1: 'Beginner'
                                 2: 'Advanced'
                                 3: 'Pro'
