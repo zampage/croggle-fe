@@ -1,4 +1,4 @@
-$sizes: (false, 50px), ('medium', 30px), ('small', 20px), ('tiny', 10px);
+$sizes: (false, 50px), ('big', 50px), ('medium', 30px), ('small', 20px), ('tiny', 10px);
 
 @each $size in $sizes {
     $selector: '';

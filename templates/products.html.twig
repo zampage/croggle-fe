@@ -3,23 +3,31 @@
 {% block pageTitle %}{{ page.title }}{% endblock %}
 
 {% block content %}
+    <div class="page-product-overview">
+        <section class="medium">
+            <section class="tiny">
+                <h2>Filters</h2>
+                <div class="product-filter filter-category">
+                    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'category', children_only: true} %}
+                </div>
+                <div class="product-filter filter-tags">
+                    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'tag', children_only: true} %}
+                </div>
+            </section>
+            <section class="tiny">
+                <a href="{{ page.url }}" class="filter-reset">Reset Filters</a>
+            </section>
+        </section>
 
-    filter by category:
-    <br>
-    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'category', children_only: true} %}
-    <br>
-    <br>
-    filter by tag:
-    <br>
-    {% include 'partials/taxonomylist.html.twig' with {base_url: page.url, taxonomy: 'tag', children_only: true} %}
-
-
-    <div class="row multi-row">
-        {% for product in page.collection() %}
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                {% include 'components/product/small.html.twig' with {parent:page, page:product} %}
+        <section class="medium">
+            <h2>Products</h2>
+            <div class="row multi-row">
+                {% for product in page.collection() %}
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        {% include 'components/product/small.html.twig' with {parent:page, page:product} %}
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </section>
     </div>
-
 {% endblock %}
