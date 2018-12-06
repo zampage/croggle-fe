@@ -1,11 +1,34 @@
+@mixin taxonomyTile {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid $colorPink;
+    text-decoration: none;
+    color: $colorPink;
+
+    &:hover,
+    &.active {
+        background-color: $colorPink;
+        color: $colorWhite;
+    }
+}
+
 .page-product {
     @import "gallery";
 
     .product-meta {
         margin-bottom: $spaceMedium;
+        font-size:0.9em;
 
-        & > div {
+        & > div{
             display:inline-block;
+
+            & + div:before{
+                content: '|';
+            }
+        }
+
+        .tags a:before{
+            content: '#';
         }
     }
 }

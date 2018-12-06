@@ -15,7 +15,7 @@
             </div>
             <div class="col-12 col-lg-7">
                 <h2>{{ page.title }}</h2>
-                {% if page.header.marks or page.header.difficulty %}
+                {% if page.header.marks or page.header.difficulty or page.header.taxonomy.category or page.header.taxonomy.tag %}
                     <div class="product-meta">
                         {% if page.header.marks %}
                             <div class="marks">
@@ -37,6 +37,19 @@
                                 <span>{{ stages[page.header.difficulty - 1] }} Difficulty</span>
                             </div>
                         {%endif%}
+                        {% if page.header.taxonomy.category %}
+                            {% set category = page.header.taxonomy.category[0] %}
+                            <div class="category">
+                                <a href="{{ page.parent.url }}/category:{{ category }}">{{ category }}</a>
+                            </div>
+                        {% endif %}
+                        {% if page.header.taxonomy.tag %}
+                            <div class="tags">
+                                {% for tag in page.header.taxonomy.tag %}
+                                    <a href="{{ page.parent.url }}/tag:{{ tag }}">{{ tag }}</a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
                 {% endif %}
                 {{ page.content }}
