@@ -18,14 +18,10 @@
                 {% elseif field.name == 'email' %}
                     <input type="hidden" name="{{ (scope ~ field.name)|fieldName }}" value="{{grav.user.email}}">
                 {% else %}
-                    <div>
-                        {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
-                    </div>
+                    {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
                 {% endif %}
             {% else %}
-                <div>
-                    {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
-                </div>
+                {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
             {% endif %}
         {% endfor %}
         {% include "forms/fields/formname/formname.html.twig" %}
