@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"gulp\" \"http-server dist -p 8080\"",
-    "build": "concurrently \"gulp build\" \"http-server dist -p 8080\""
+    "build": "concurrently \"gulp build\" \"http-server dist -p 8080\"",
+    "static": "concurrently \"gulp\" \"http-server static -p 9090\" "
   },
   "repository": {
     "type": "git",

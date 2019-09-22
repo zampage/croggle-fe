@@ -1,5 +1,6 @@
 .idea
-dist
+/dist
+/static/dist
 node_modules
 
 /vendor/

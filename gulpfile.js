@@ -19,7 +19,7 @@ const dir = {
 		jsWatch: 'js/**/*.js',
 	},
 	dist: {
-		base: 'dist',
+		base: ['dist', 'static/dist'],
 	},
 	sassPaths: [
 		'node_modules'
@@ -33,7 +33,9 @@ const name = {
 
 //workers
 const clean = (done) => {
-	fs.remove(dir.dist.base, done);
+	dir.dist.base.forEach(dist => fs.removeSync(dist))
+	done();
+	//fs.remove(dir.dist.base, done);
 };
 const buildSass = () => {
 	return gulp.src(dir.src.sass)
@@ -41,11 +43,12 @@ const buildSass = () => {
 		.pipe(sass({includePaths: dir.sassPaths})
 		.on('error', sass.logError))
 		.pipe(autoprefixer({
-				browsers: ['defaults', 'not ie < 9']
+				browsers: ['defaults', 'not ie < 11']
 		}))
 		.pipe(cleanCss({compability: 'ie9'}))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(dir.dist.base));
+		.pipe(gulp.dest(dir.dist.base[0]))
+		.pipe(gulp.dest(dir.dist.base[1]));
 };
 const buildJs = () => {
 	return browserify(dir.src.js).transform(
@@ -57,7 +60,8 @@ const buildJs = () => {
 		.pipe(buffer())
 		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(dir.dist.base));
+		.pipe(gulp.dest(dir.dist.base[0]))
+		.pipe(gulp.dest(dir.dist.base[1]));
 };
 
 //watches
